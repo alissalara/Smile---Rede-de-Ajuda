@@ -98,6 +98,18 @@ async function mostrarConteudo(rota) {
     DOMParser()
                 .parseFromString(html,"text/html");
             const cadastro = documento.querySelector("main");
+            const imagens = documento.querySelectorAll("main img");
+
+            imagens.forEach((imagem) => {
+                const caminho = imagem.getAttribute("src");
+
+                if (caminho && !
+            caminho.startsWith("/") && !
+            caminho.startsWith("http")) {
+                    imagem.src = new URL(caminho, resposta.url).href;
+                }
+            });
+
             if (!cadastro) {
                 throw new Error("Conteúdo do cadastro não encontrado.");
             }
