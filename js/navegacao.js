@@ -86,7 +86,7 @@ async function mostrarConteudo(rota) {
 
         try {
             const resposta = await
-    fetch("cadastro.html");
+    fetch("/html/cadastro.html");
 
             if (!resposta.ok) {
                 throw new Error("Não foi possível carregar o cadastro.");
