@@ -1,0 +1,26 @@
+{
+  "name": "smile---rede-de-ajuda",
+  "version": "1.0.0",
+  "description": "Smile — Rede de Ajuda 💛",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alissalara/Smile---Rede-de-Ajuda.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/alissalara/Smile---Rede-de-Ajuda/issues"
+  },
+  "homepage": "https://github.com/alissalara/Smile---Rede-de-Ajuda#readme",
+  "devDependencies": {
+    "vite": "^8.3.4"
+  }
+}
