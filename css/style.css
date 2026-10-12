@@ -545,3 +545,21 @@ textarea.invalido {
         grid-template-columns: 1fr;
     }
 }
+
+/* Link de acessibilidade para navegação por teclado */
+
+.link-acessibilidade {
+    position: absolute;
+    left: 10px;
+    top: -100px;
+    z-index: 1000;
+    padding: 12px 16px;
+    background-color: #FFFFFF;
+    color: #222222;
+    border: 2px solid #2E7D6E;
+    border-radius: 5px;
+}
+
+.link-acessibilidade:focus {
+    top: 10px;
+}
