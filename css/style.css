@@ -1,0 +1,547 @@
+/* ==================================
+   DESIGN SYSTEM - SMILE
+   ================================== */
+
+:root {
+
+    /* CORES PRIMÁRIAS */
+    --cor-primaria: #F4B400;
+    --cor-primaria-clara: #FFD54F;
+    --cor-primaria-escura: #B77900;
+
+    /* CORES SECUNDÁRIAS */
+    --cor-secundaria: #2E7D6E;
+    --cor-secundaria-clara: #5FA89A;
+
+    /* CORES NEUTRAS */
+    --cor-branco: #FFFFFF;
+    --cor-cinza-claro: #F5F5F5;
+    --cor-cinza: #666666;
+    --cor-preto: #222222;
+
+    /* TIPOGRAFIA - 5 TAMANHOS */
+    --fonte-xs: 0.875rem;  /* 14px */
+    --fonte-sm: 1rem;      /* 16px */
+    --fonte-md: 1.25rem;   /* 20px */
+    --fonte-lg: 1.75rem;   /* 28px */
+    --fonte-xl: 2.5rem;    /* 40px */
+
+    /* ESPAÇAMENTOS - ESCALA MODULAR */
+    --espaco-xs: 4px;
+    --espaco-sm: 8px;
+    --espaco-md: 16px;
+    --espaco-lg: 24px;
+    --espaco-xl: 32px;
+}
+
+/* ESTILOS GERAIS */
+
+body {
+    margin: 0;
+    background-color: var(--cor-branco);
+    color: var(--cor-preto);
+    font-family: Arial, sans-serif;
+    font-size: var(--fonte-sm);
+    line-height: 1.6;
+}
+
+header {
+    background-color: var(--cor-primaria);
+    padding: var(--espaco-lg);
+}
+
+nav {
+    padding: var(--espaco-sm);
+}
+
+main {
+    padding: var(--espaco-xl);
+}
+
+section {
+    margin-bottom: var(--espaco-xl);
+}
+
+h1 {
+    font-size: var(--fonte-xl);
+}
+
+h2 {
+    font-size: var(--fonte-lg);
+    color: var(--cor-secundaria);
+}
+
+h3 {
+    font-size: var(--fonte-md);
+}
+
+p {
+    font-size: var(--fonte-sm);
+}
+
+small {
+    font-size: var(--fonte-xs);
+}
+
+button {
+    background-color: var(--cor-secundaria);
+    color: var(--cor-branco);
+    padding: var(--espaco-sm) var(--espaco-md);
+}
+/* ==================================
+   GRID RESPONSIVO - 12 COLUNAS
+   ================================== */
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: var(--espaco-md);
+    box-sizing: border-box;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: var(--espaco-md);
+}
+
+/* Classes para ocupação das colunas */
+
+.col-12 {
+    grid-column: span 12;
+}
+
+.col-8 {
+    grid-column: span 8;
+}
+
+.col-6 {
+    grid-column: span 6;
+}
+
+.col-4 {
+    grid-column: span 4;
+}
+
+.col-3 {
+    grid-column: span 3;
+}
+
+
+/* ==================================
+   BREAKPOINT 1 - CELULARES PEQUENOS
+   ================================== */
+
+@media (max-width: 480px) {
+
+    .grid {
+        grid-template-columns: repeat(12, 1fr);
+        gap: var(--espaco-sm);
+    }
+
+    .col-3,
+    .col-4,
+    .col-6,
+    .col-8 {
+        grid-column: span 12;
+    }
+
+    h1 {
+        font-size: var(--fonte-lg);
+    }
+}
+
+
+/* ==================================
+   BREAKPOINT 2 - CELULARES
+   ================================== */
+
+@media (min-width: 481px) and (max-width: 767px) {
+
+    .col-3,
+    .col-4,
+    .col-6,
+    .col-8 {
+        grid-column: span 12;
+    }
+}
+
+
+/* ==================================
+   BREAKPOINT 3 - TABLETS
+   ================================== */
+
+@media (min-width: 768px) and (max-width: 991px) {
+
+    .col-3,
+    .col-4 {
+        grid-column: span 6;
+    }
+
+    .col-6,
+    .col-8 {
+        grid-column: span 12;
+    }
+}
+
+
+/* ==================================
+   BREAKPOINT 4 - DESKTOPS
+   ================================== */
+
+@media (min-width: 992px) and (max-width: 1199px) {
+
+    .container {
+        max-width: 960px;
+    }
+}
+
+
+/* ==================================
+   BREAKPOINT 5 - TELAS GRANDES
+   ================================== */
+
+@media (min-width: 1200px) {
+
+    .container {
+        max-width: 1200px;
+    }
+}
+/* ==================================
+   FLEXBOX - COMPONENTES INTERNOS
+   ================================== */
+
+/* Navegação */
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--espaco-md);
+    flex-wrap: wrap;
+}
+
+/* Cabeçalho */
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Formulários */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--espaco-md);
+}
+
+/* Rodapé */
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--espaco-sm);
+}
+
+/* ==================================
+   MENU RESPONSIVO
+   ================================== */
+
+/* Lista principal do menu */
+.menu {
+    display: flex;
+    list-style: none;
+    gap: var(--espaco-md);
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+
+/* Links do menu */
+.menu a {
+    text-decoration: none;
+    color: var(--cor-preto);
+    padding: var(--espaco-sm);
+}
+
+/* Item que possui submenu */
+.dropdown {
+    position: relative;
+}
+
+/* Submenu escondido */
+.submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    list-style: none;
+    background-color: var(--cor-branco);
+    padding: var(--espaco-sm);
+    margin: 0;
+    min-width: 220px;
+}
+
+/* Mostra o submenu ao passar o mouse */
+.dropdown:hover .submenu,
+.dropdown:focus-within .submenu {
+    display: block;
+}
+
+/* Botão hambúrguer escondido no computador */
+.menu-toggle {
+    display: none;
+    font-size: var(--fonte-lg);
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+
+/* MENU PARA CELULARES */
+
+@media (max-width: 767px) {
+
+    /* Mostra o botão ☰ */
+    .menu-toggle {
+        display: block;
+    }
+
+    /* Esconde inicialmente o menu */
+    .menu {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    /* Esta classe será ativada pelo JavaScript */
+    .menu.ativo {
+        display: flex;
+    }
+
+    /* Submenu no celular */
+    .submenu {
+        position: static;
+        width: 100%;
+    }
+}
+
+/* ==================================
+   ESTADOS INTERATIVOS DOS BOTÕES
+   ================================== */
+
+button {
+    background-color: var(--cor-secundaria);
+    color: var(--cor-branco);
+    border: 2px solid transparent;
+    border-radius: 6px;
+    padding: var(--espaco-sm) var(--espaco-md);
+    cursor: pointer;
+
+    transition:
+        background-color 0.3s ease,
+        box-shadow 0.3s ease,
+        transform 0.2s ease,
+        border-color 0.3s ease;
+}
+
+/* Mouse sobre o botão */
+button:hover {
+    background-color: var(--cor-secundaria-clara);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.20);
+}
+
+/* Botão selecionado pelo teclado */
+button:focus {
+    outline: 3px solid var(--cor-primaria);
+    outline-offset: 3px;
+}
+
+/* Momento em que o botão é pressionado */
+button:active {
+    background-color: var(--cor-primaria-escura);
+    transform: scale(0.97);
+}
+
+/* Botão indisponível */
+button:disabled {
+    background-color: var(--cor-cinza-claro);
+    color: var(--cor-cinza);
+    cursor: not-allowed;
+    box-shadow: none;
+    opacity: 0.7;
+}
+
+/* ==================================
+   VALIDAÇÃO VISUAL DOS FORMULÁRIOS
+   ================================== */
+
+input,
+select {
+    border: 2px solid var(--cor-cinza);
+    border-radius: 5px;
+    padding: var(--espaco-sm);
+
+    transition:
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+/* Campo selecionado */
+input:focus,
+select:focus {
+    outline: none;
+    border-color: var(--cor-secundaria);
+    box-shadow: 0 0 0 3px rgba(46, 125, 110, 0.20);
+}
+
+/* Campo obrigatório preenchido corretamente */
+input:required:valid {
+    border-color: var(--cor-secundaria);
+}
+
+/* Campo obrigatório com valor inválido */
+input:required:invalid:not(:placeholder-shown) {
+    border-color: #B3261E;
+    box-shadow: 0 0 0 2px rgba(179, 38, 30, 0.15);
+}
+
+/* ==================================
+   BADGES
+   ================================== */
+
+.badge {
+    display: inline-block;
+    background-color: var(--cor-primaria);
+    color: var(--cor-preto);
+    padding: var(--espaco-xs) var(--espaco-sm);
+    border-radius: 20px;
+    font-size: var(--fonte-xs);
+    font-weight: bold;
+}
+
+/* ==================================
+   ALERTA
+   ================================== */
+
+.alerta {
+    background-color: var(--cor-primaria-clara);
+    color: var(--cor-preto);
+    border-left: 5px solid var(--cor-primaria-escura);
+    padding: var(--espaco-md);
+    margin-bottom: var(--espaco-lg);
+    border-radius: 5px;
+}
+
+/* ==================================
+   TOAST
+   ================================== */
+
+.toast {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+
+    background-color: var(--cor-secundaria);
+    color: var(--cor-branco);
+
+    padding: var(--espaco-md) var(--espaco-lg);
+    border-radius: 8px;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+
+    opacity: 0;
+    visibility: hidden;
+
+    transform: translateY(20px);
+
+    transition:
+        opacity 0.3s ease,
+        transform 0.3s ease,
+        visibility 0.3s;
+}
+
+.toast.mostrar {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* Estados de validação dos formulários */
+
+input.valido,
+select.valido,
+textarea.valido {
+    border: 2px solid #2E7D6E;
+}
+
+input.invalido,
+select.invalido,
+textarea.invalido {
+    border: 2px solid #C62828;
+}
+
+/* Mensagens de validação dos formulários */
+
+.mensagem-erro {
+    display: block;
+    color: #C62828;
+    font-size: 0.875rem;
+    margin-top: 4px;
+    margin-bottom: 8px;
+}
+
+/* ORGANIZAÇÃO DAS INICIATIVAS SMILE */
+
+#acoes {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+    padding: 25px 0;
+    align-items: stretch;
+}
+
+#acoes > .col-12 {
+    grid-column: 1 / -1;
+}
+
+#acoes > article {
+    grid-column: auto;
+    width: auto;
+    min-width: 0;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #F5F5F5;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+}
+
+#acoes > article h3 {
+    color: #2E7D6E;
+    margin-bottom: 10px;
+}
+
+#acoes > h3,
+#acoes > canvas {
+    grid-column: 1 / -1;
+}
+
+#acoes > canvas {
+    max-width: 100%;
+}
+
+@media (max-width: 768px) {
+    #acoes {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+    #acoes {
+        grid-template-columns: 1fr;
+    }
+}

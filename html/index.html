@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smile | Ação Social</title>
+    <link rel="stylesheet" 
+href="../CSS/style.css">
+</head>
+
+<body>
+    <header>
+        <img src="../IMG/logo-smile.png" alt="Logo da Smile" width="400">
+
+        <h1>Smile</h1>
+        <p><strong>Cuidar de pessoas é transformar vidas.</strong></p>
+
+        <nav aria-label="Navegação principal">
+            <button class="menu-toggle"
+            aria-label="Abrir menu"
+            aria-expanded="false">
+                ☰
+            </button>
+
+            <ul class="menu">
+                <li><a href="#inicio" data-rota="inicio">Início</a>
+                </li>
+
+                <li><a href="#sobre" data-rota="sobre">Sobre nós</a>
+                </li>
+
+                <li class="dropdown"><a href="#iniciativas" data-rota="iniciativas">Iniciativas</a>
+
+                    <ul class="submenu">
+                        <li><a href="#iniciativas" data-rota="iniciativas">Conheça nossas iniciativas</a>
+                        </li>
+
+                        <li><a href="#engajamento" data-rota="engajamento">Seja voluntário</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li><a href="#engajamento" data-rota="engajamento">Engajamento</a>
+                </li>
+
+                <li><a href="#contato" data-rota="contato">Contato</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <div id="conteudo-principal">
+            <section id="inicio">
+                <h2>Juntos por um mundo com mais empatia e solidariedade</h2>
+
+                <p>Somos uma organização sem fins lucrativos dedicada a levar saúde, carinho e solidariedade para crianças e idosos em situação de vulnerabilidade.</p>
+
+                <p>Toda semana, reunimos voluntários para realizar ações sociais em asilos e orfanatos que precisam de apoio.</p>
+
+                <a href="#como-ajudar">Quero ajudar</a>
+            </section>
+
+            <section id="sobre">
+                <h2>Sobre nós</h2>
+
+                <p>A Smile nasceu com o propósito de aproximar profissionais, voluntários, doadores e instituições sociais.</p>
+
+                <p>Realizamos visitas semanais a asilos, orfanatos e outras instituições, oferecendo atendimento, atividades, doações e momentos de acolhimento.</p>
+            </section>
+
+            <section id="acoes" class="grid">
+                <h2 class="col-12">Nossas ações</h2>
+
+                <article class="col-4">
+                    <h3>Saúde</h3>
+
+                    <p>Contamos com médicos, psicólogos, entre outros profissionais, para realizar avaliações, triagens e identificar necessidades de atendimento.</p>
+                </article>
+
+                <article class="col-4">
+                    <h3>Saúde bucal</h3>
+
+                    <p>Dentistas voluntários participam das ações oferecendo avaliações e cuidados relacionados à saúde bucal.</p>
+                </article>
+
+                <article class="col-4">
+                    <h3>Alimentação</h3>
+
+                    <p>Cozinheiros e voluntários ajudam na preparação de refeições e atividades relacionadas à alimentação e ao bem-estar.</p>
+                </article>
+
+                <article class="col-4">
+                    <h3>Doações</h3>
+
+                    <p>Arrecadamos roupas, brinquedos, alimentos e outros itens necessários para crianças, idosos e instituições.</p>
+                </article>
+
+                <article class="col-4">
+                    <h3>Apoio com medicamentos</h3>
+
+                    <p>Recebemos doações financeiras destinadas à compra de medicamentos e outros itens necessários, de acordo com as necessidades identificadas.</p>
+                </article>
+
+                <article class="col-4">
+                    <h3>Companhia e acolhimento</h3>
+
+                    <p>Além dos cuidados materiais e de saúde, buscamos oferecer atenção, conversa, leitura, atividades e momentos de carinho para as pessoas atendidas.</p>
+                </article>
+            </section>
+
+            <section id="como-ajudar">
+                <h2>Como você pode ajudar?</h2>
+
+                <p>Existem várias maneiras de fazer parte dessa rede de solidariedade.</p>
+
+                <ul>
+                    <li>Seja um voluntário.</li>
+                    <li>Doe roupas e brinquedos.</li>
+                    <li>Doe alimentos não-perecíveis.</li>
+                    <li>Contribua financeiramente.</li>
+                </ul>
+
+                <aside>
+                    <h3>Seja parte dessa transformação</h3>
+
+                    <p>Cada doação, cada hora de voluntariado e cada gesto de carinho pode fazer diferença na vida de alguém.</p>
+                </aside>
+            </section>
+
+            <section id="instituicoes">
+                <h2>Para instituições</h2>
+
+                <p>Sua instituição precisa de apoio? Ou conhece alguma instituição que precise? Entre em contato conosco para conversarmos sobre uma possível ação social.</p>
+
+                <p>Nosso objetivo é conhecer as necessidades de cada local para organizar ações que contribuam para as pessoas atendidas.</p>
+            </section>
+
+            <section id="contato">
+                <h2>Entre em contato</h2>
+
+                <address>
+                    <p>E-mail:<a href="mailto:smile@rededocuidado.org">smile@rededocuidado.org</a></p>
+                </address>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Rede do Cuidado, Smile. Todos os direitos reservados.</p>
+
+        <p>Projeto acadêmico sem fins lucrativos.</p>
+    </footer>
+
+    <!-- Biblioteca externa -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.8/dist/chart.umd.min.js"></script>
+
+    <!-- Scripts modulares da Smile -->
+    <script src="../JS/menu.js"></script>
+    <script src="../JS/formulario.js"></script>
+    <script src="../JS/navegacao.js"></script>
+    <script src="../JS/armazenamento.js"></script>
+    <script src="../JS/grafico.js"></script>
+
+</body>
+</html>
